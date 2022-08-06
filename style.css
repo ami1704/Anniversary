@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /*background-color: rgb(8,8,32);*/
+  background: radial-gradient(pink,black);
+}
+
+.container
+{
+
+  display: flex;
+  transform-style: preserve-3d;
+  gap: 10px;
+  transform: rotateY(30deg) rotateX(10deg);
+}
+
+.container .text
+{
+
+  top: 50%;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transition: 2.5s ease-in-out;
+  transition-delay: calc(0.25s * var(--j));
+}
+
+.container:hover .text
+{
+  transform: rotateX(-360deg);
+}
+.container:hover .text:nth-child(16)
+{
+  transform: rotateX(630deg);
+}
+
+.container:hover .text:nth-child(6)
+{
+  transform: rotateX(630deg);
+}
+
+.container .text::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#4f5f76;
+    transform-origin: left;
+    transform: rotateY(90deg) translateX(-50px);
+}
+.container .text:first-child:before
+{
+  background: #f75990;
+}
+.container .text:nth-child(6):before
+{
+  background: #f75990;
+}
+.container .text:nth-child(16):before
+{
+  background: #f75990;
+}
+
+.container .text span
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#4f5f76,#9df9ef,#4f5f76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  color: #000;
+  font-family: cursive;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+}
+.container .text:first-child span{
+  background: linear-gradient(#f75990,#ffa8B6,#f75990);
+  color: #333;
+}
+.container .text:nth-child(6) span{
+  background: linear-gradient(#f75990,#ffa8B6,#f75990);
+  color: #333;
+}
+
+.container .text:nth-child(16) span{
+  background: linear-gradient(#f75990,#ffa8B6,#f75990);
+  color: #333;
+}
+
+.container .text:last-child span
+{
+  font-size: 2em;
+}
+
+a{
+  color: white;
+}
+
+
+/* bubble background */
+
+
+span .bub{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(8,8,32);
+  position: relative;
+  overflow: hidden;
+}
+.bub{
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  box-shadow: inset 5px -5px 13px white;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255,.01);
+
+  backdrop-filter:blur(2px);
+  position: absolute;
+  bottom: -70px;
+
+}
+
+
+.bub::before
+{
+  position: absolute;
+  content: "";
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: 5px;
+  right: 10px;
+  box-shadow: 0px 0px 10px white;
+}
+
+.bub.a{
+  left: 10%;animation: bubble 2s ease-in 1s infinite;
+}
+.bub.b{
+  left: 20%;animation: bubble2 1.5s ease-in 1.4s infinite;
+}
+.bub.c{
+  left: 3%;animation: bubble 5s ease-in 3.8s infinite;
+}
+.bub.d{
+  left: 40%;animation: bubble2 1.8s ease-in 0.5s infinite;
+}
+.bub.e{
+  left: 75%;animation: bubble 2.3s ease-in 2.5s infinite;
+}
+.bub.f{
+  left: 90%;animation: bubble2 2.5s ease-in 3s infinite;
+}
+.bub.g{
+  left: 60%;animation: bubble 2.2s ease-in 2s infinite;
+}
+.bub.h{
+  left: 50%;animation: bubble2 1.6s ease-in 2s infinite;
+}
+.bub.i{
+  left: 65%;animation: bubble 1.8s ease-in 2.1s infinite;
+}
+.bub.j{
+  left: 3%;animation: bubble2 2s ease-in 1.5s infinite;
+}
+.bub.k{
+  left: 35%;animation: bubble 3s ease-in infinite;
+}
+
+@keyframes bubble{
+  0%{
+    opacity: 0;
+  }
+  10%,93%{
+    opacity:1;
+  }
+  100%{
+    transform: translate(90px, -700px);
+    display: none;
+  }
+}
+@keyframes bubble2{
+  0%{
+    opacity: 0;
+  }
+  10%,93%{
+    opacity:1;
+  }
+  100%{
+    transform: translate(-90px, -700px);
+    display: none;
+  }
+}
+
+h1{
+  margin: 2px;
+  padding: 2px;
+  height: auto;
+  width: auto;
+  background: radial-gradient(pink,#FF6F61);
+  /*border: none;*/
+  font-size: 20px;
+  font-family: sans-serif;
+  cursor: pointer;
+  position: absolute;
+  border: 2px solid black;
+  align-items: center;
+  bottom: 70%;
+
+}
+
+input{
+  height: 100px;
+  width: 100px;
+  background: #101357;
+  color: white;
+  /*border: none;*/
+  font-size: 30px;
+  font-family: fantasy;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  top: 200px;
+  left: 50%;
+  position: center;
+}
+
+img{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
