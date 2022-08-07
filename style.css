@@ -19,8 +19,8 @@ body{
 
 .container
 {
-  left: 50%;
-  right: 50%;
+/*   left: 50%;
+  right: 50%; */
   display: flex;
   transform-style: preserve-3d;
   gap: 10px;
@@ -30,7 +30,7 @@ body{
 .container .text
 {
 
-  top: 50%;
+/*   top: 50%; */
   position: relative;
   width: 100px;
   height: 100px;
