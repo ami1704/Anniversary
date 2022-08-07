@@ -19,7 +19,8 @@ body{
 
 .container
 {
-
+  left: 50%;
+  right: 50%;
   display: flex;
   transform-style: preserve-3d;
   gap: 10px;
