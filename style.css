@@ -241,10 +241,14 @@ input{
   cursor: pointer;
   position: absolute;
   border-radius: 50%;
-  top: 200px;
+  top: 100%;
+
   left: 50%;
   right: 50%;
-  position: center;
+  /* position: center; */
+  text-align: center;
+  /* vertical-align: bottom; */
+  /* justify-content: flex-end; */
 }
 
 img{
