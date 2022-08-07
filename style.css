@@ -243,6 +243,7 @@ input{
   border-radius: 50%;
   top: 200px;
   left: 50%;
+  right: 50%;
   position: center;
 }
 
